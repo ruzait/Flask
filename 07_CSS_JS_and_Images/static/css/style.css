@@ -1,0 +1,13 @@
+h1 {
+    color: darkblue;
+    font-size: 60px;
+}
+
+body {
+    background: #f4f4ff;
+}
+
+img {
+    width: 40%;
+    margin: 2rem;
+}

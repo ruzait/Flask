@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Render Template</title>
+</head>
+
+<body>
+    <h1>This page from <i><u>index.html</u></i> using Flask render template</h1>
+
+    <p>The first name is {{ first_name }}</p>
+
+    <p>{{ stuff }} <br>
+        {{ stuff|safe }}<br>
+        {{ stuff|striptags }}</p>
+
+    <p>{{ fav_piza }}</p>
+    <p>{{ fav_piza.0 }}</p>
+
+    <h2>We can use python code in jinja2</h2>
+
+    <h3>Python for loop</h3>
+    {% for topping in fav_piza %}
+        <li>{{ topping }}</li>
+    {% endfor %}
+
+    <h3>Python if condtion</h3>
+    {% for topping in fav_piza %}
+       {% if topping == 686 %}
+            <li>{{ topping + 111 }}</li>
+       {% else %}
+            <li>{{ topping }}</li>
+       {% endif %}
+    {% endfor %}
+
+</body>
+
+</html>

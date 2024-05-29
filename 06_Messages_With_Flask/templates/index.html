@@ -1,0 +1,18 @@
+{% extends 'bash.html' %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Hey <strong>{{ first_name }}</strong> {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+{% endfor %}
+
+<h1>This page from <i><u>index.html</u></i> using Flask render template</h1>
+
+<p>The first name is {{ first_name }}</p>
+
+{% endblock %}
